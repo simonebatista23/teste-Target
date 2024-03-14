@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="container-dados">
+        <!-- <div class="row">
+            <div class="day">
+               
+            </div>
+            <div class="value">
+    
+            
+            </div>
+        </div>
+    </div> -->
+    </div>
+
+    <script>
+        function carregar() {
+            fetch('dados.json')
+                .then(response => response.json())
+                .then(dados => {
+                    const container = document.querySelector("#container-dados")
+
+                    dados.map(dado => {
+                        const row = document.createElement("div")
+
+                        const day = document.createElement("div")
+
+                        day.classList.add("day")
+                        day.textContent = "dia:"
+
+                        const value
+                        = document.createElement("div")
+
+                        value.classList.add("value")
+                        value.textContent = "valor:"
+
+                        row.classList.add("row")
+
+                        const dia = document.createElement("h4")
+
+                        dia.textContent = dado.dia
+
+                        const valor = document.createElement("h4")
+
+                        valor.textContent = dado.valor
+
+                        row.appendChild(day)
+                        row.appendChild(value)
+                        value.appendChild(valor)
+                        day.appendChild(dia)
+                        container.appendChild(row)
+                    })
+                })
+
+        }
+        carregar()
+    </script>
+</body>
+
+</html>

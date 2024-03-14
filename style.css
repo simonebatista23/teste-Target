@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color:#fff;
+}
+
+.row {
+  text-align: center;
+  background-color: #4F4F4F;
+  padding: 10px;
+  margin: 0 0 10px 0 ;
+}
+
+div .day {
+  font-weight: 600;
+  padding: 5px;
+}
+
+div .value {
+  padding: 5px;
+  font-weight: 600;
+}
+
+.row h4{
+  padding-top: 5px;
+}
